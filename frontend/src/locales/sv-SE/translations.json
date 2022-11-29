@@ -1,0 +1,70 @@
+{
+    "common": {
+        "close": "Stäng",
+        "done": "Klar",
+        "next": "Nästa",
+        "previous": "Föregående",
+        "readMore": "Läs mer"
+    },
+    "pages": {
+        "home": {
+            "slogan": "<span class='bolder'>Hjälp</span> oss <span class='bolder'>hjälpa</span> dig <span class='bolder'>hjälpa</span> <span class='f3'>barnen</span>",
+            "intro": "Gå med i vårt uppdrag att föra utbildning närmare barn i byarna.",
+            "donateButton": "Donera nu",
+            "text1": "",
+            "text2": "",
+            "latestUpdateCard": {
+               "title": "Nyfiken på vad vi gör just nu?",
+               "text": "Följ våra senaste uppdateringar och nyheter i vår blogg",
+               "button": "Jag är nyfiken!"
+            },
+            "whoAreWe": {
+                "title": "Vad är vi?",
+                "p1": "Classrooms for Change Ghana är en välgörenhets- och volontärorganisation, grundad av mig, Hadla. Låt mig presentera mig samt anledningen bakom varför jag startade Classrooms for Change!",
+                "p2": "Jag heter Hadla Bergman. Jag är en en Software Engineer från Stockholm. Jag har rest emellan Sverige och Ghana under 5 års tid för att organisera upp skolor i mindre byar. Ghana’s regeringsponsrar skolor över hela landet för att erbjuda gratis utbildning. Men skolor i byar saknar tyvärr denna finansiering. De har inte fått en rättvis chans. Det är därför du och jag ska föra utbildningen närmare dem som aldrig fick en ärlig chans. ",
+                "p3": "Låt oss göra världen lite mer rättvis tillsammans!",
+                "longTerm.title": "What is out long-term vision?",
+                "longTerm.text": "HERE",
+                "mission.title": "What is our mission?",
+                "mission.text": "We want to give children a more <span class='bold'>secure</span> and <span class='bold'>stable</span> future by helping them develop the skills and competence necessary to <span class='bold'>help them out of poverty.</span> </b></b> Help us <span class='bold'>endance</span> the <span class='bold'>education rate</span> in villages secluded from these opportunities.",
+                "succeed.title": "How will we succeed with our mission?",
+                "succeed.text": "HERE"
+             }
+        },
+        "about": {
+            "title": "Om oss"
+        },
+        "contact": {
+            "title": "Kontakta oss"
+        }
+    },
+    "navbar": {
+        "home": "Hem",
+        "latestUpdates": "Senaste uppdateringar",
+        "contact": "Kontakt"
+    },
+    "steps": {
+        "step": "Steg",
+        "step1": {
+            "title": "Köp mark",
+            "intro": "INTRO____1",
+            "description1": "DESCRIPTION1",
+            "description2": "DESCRIPTION2",
+            "description3": "DESCRIPTION3"
+        },
+        "step2": {
+            "title": "TITLE____2",
+            "intro": "INTRO____2",
+            "description1": "DESCRIPTION1",
+            "description2": "DESCRIPTION2",
+            "description3": "DESCRIPTION3"
+        },
+        "step3": {
+            "title": "TITLE____3",
+            "intro": "INTRO____3",
+            "description1": "DESCRIPTION1",
+            "description2": "DESCRIPTION2",
+            "description3": "DESCRIPTION3"
+        }
+    }
+}

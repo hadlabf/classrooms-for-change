@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+span.bold {
+  font-weight: 500;
+}
+span.bolder {
+  font-weight: 700;
+}
+span.f3 {
+  font-family: 'Permanent Marker', cursive;
+}
 
 .App-logo {
   height: 40vmin;
