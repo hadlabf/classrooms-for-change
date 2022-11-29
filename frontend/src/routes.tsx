@@ -53,7 +53,7 @@ export const useRoutes = (): RouteType[] => {
       node: <Donate />,
       navbar: {
         text: t("navbar.donate"),
-        to: "/donates",
+        to: "/donate",
       },
     },
   ];

@@ -8,6 +8,7 @@ import { Container } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { ThemeConfig } from "./config/theme.config";
 import { Footer } from "./components/Footer";
+import { Box } from "@mui/system";
 
 export const Font1 = "DM Sans, sans-serif";
 export const Font2 = "Fira Sans Condensed, sans-serif";
@@ -47,11 +48,13 @@ function App() {
         <Router>
           <Container maxWidth="lg">
             <Navbar />
-            <Routes>
-              {useRoutes().map((route) => (
-                <Route key={route.path} path={route.path} element={route.node} />
-              ))}
-            </Routes>
+            <Box mt={8}>
+              <Routes>
+                {useRoutes().map((route) => (
+                  <Route key={route.path} path={route.path} element={route.node} />
+                ))}
+              </Routes>
+            </Box>
           </Container>
           <Footer />
         </Router>

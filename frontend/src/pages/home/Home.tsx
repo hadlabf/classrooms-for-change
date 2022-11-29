@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Text1, Title1, Title2, Title3, Title4 } from "../../components/UI/Text";
-import { Col, Card, Button } from "../../components/UI/Common";
+import { Col, Card } from "../../components/UI/Common";
 import Grid from "@mui/material/Unstable_Grid2";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import styled from "styled-components";
@@ -24,7 +24,7 @@ const TopHeader = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <Box gap={4} mt={8} display="flex" flexDirection="row">
+    <Box display="flex" flexDirection="row" justifyContent="flex-start">
       <Col>
         <Title1
           dangerouslySetInnerHTML={{

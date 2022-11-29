@@ -35,7 +35,11 @@
             "title": "Om oss"
         },
         "contact": {
-            "title": "Kontakta oss"
+            "title": "Kontakta oss",
+            "name": "Namn",
+            "email": "E-post",
+            "message": "Meddelande",
+            "send": "Skicka meddelande"
         }
     },
     "navbar": {

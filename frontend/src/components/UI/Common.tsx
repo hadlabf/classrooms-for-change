@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import { Box, Button as ButtonUI } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import { ReactNode } from "react";
 
 type ChildProp = {
-  children: JSX.Element;
+  children: JSX.Element | ReactNode;
 };
 
-export const Col = styled.div`
+export const Col = styled.div<{
+  py?: number;
+  px?: number;
+}>`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: ${(props) =>
+      props.py !== undefined ? props.py * props.theme.spacer : props.theme.spacer * 0}px
+    ${(props) =>
+      props.px !== undefined ? props.px * props.theme.spacer : props.theme.spacer * 0}px !important;
 `;
 export const Row = styled.div<{ gap?: number }>`
   display: flex;
@@ -61,6 +69,13 @@ export const BuildingRequirements = ({ children }: ChildProp): JSX.Element => {
           {children}
         </Grid>
       </Grid>
+    </Box>
+  );
+};
+export const Layout = ({ children }: ChildProp): JSX.Element => {
+  return (
+    <Box display="flex" flexDirection="row" justifyContent="flex-start" alignItems="flex-start">
+      {children}
     </Box>
   );
 };

@@ -29,7 +29,7 @@ export const Footer = (): JSX.Element => {
   );
 };
 
-const FooterContariner = styled.div`
+const FooterContariner = styled.footer`
   background-color: ${(props) => props.theme.colors.black} !important;
   color: ${(props) => props.theme.colors.grey08} !important;
   padding-top: ${(props) => props.theme.spacer * 8}px;

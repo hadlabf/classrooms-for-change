@@ -69,7 +69,11 @@
             "title": "About us"
         },
         "contact": {
-            "title": "Contact us"
+            "title": "We’ve been waiting for you.",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send message"
         }
     },
     "navbar": {
