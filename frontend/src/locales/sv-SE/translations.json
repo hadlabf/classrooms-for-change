@@ -40,6 +40,7 @@
     },
     "navbar": {
         "home": "Hem",
+        "donate": "Donera",
         "latestUpdates": "Senaste uppdateringar",
         "contact": "Kontakt"
     },

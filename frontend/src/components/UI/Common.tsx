@@ -38,8 +38,8 @@ export const Button = styled(ButtonUI)<{
   px?: number;
   fontSize?: number;
 }>`
+  font-weight: ${(props) => props.theme.font.weight.bold} !important;
   border-radius: ${(props) => props.theme.borderRadius.small} !important;
-  font-family: ${(props) => props.theme.font.family} !important;
   font-size: ${(props) =>
     props.fontSize ? props.theme.spacer * props.fontSize : props.theme.spacer * 2.25}px !important;
   text-transform: inherit !important;

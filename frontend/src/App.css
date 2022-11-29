@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+a {
+  text-decoration: none;
+
+}
 span.bold {
   font-weight: 500;
 }
@@ -45,3 +49,7 @@ span.f3 {
     transform: rotate(360deg);
   }
 }
+
+
+
+

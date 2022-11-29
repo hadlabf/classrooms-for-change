@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { LatestUpdates } from "./pages/latestUpdates/LatestUpdates";
 import { Contact } from "./pages/contact/Contact";
 import { Home } from "./pages/home/Home";
+import { Donate } from "./pages/donate/Donate";
 
 type RouteType = {
   // Path for the route. Should match React Router specification.
@@ -45,6 +46,14 @@ export const useRoutes = (): RouteType[] => {
       navbar: {
         text: t("navbar.latestUpdates"),
         to: "/latest-updates",
+      },
+    },
+    {
+      path: "/donate/*",
+      node: <Donate />,
+      navbar: {
+        text: t("navbar.donate"),
+        to: "/donates",
       },
     },
   ];

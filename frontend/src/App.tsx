@@ -1,21 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./App.scss";
 import { Navbar } from "./components/Navbar";
 import { useRoutes } from "./routes";
 import { Container } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { ThemeConfig } from "./config/theme.config";
 import { Footer } from "./components/Footer";
-import { Text1 } from "./components/UI/Text";
-
-// declare module "@mui/material/styles" {
-//   interface ThemeMUI {
-//     status: {
-//       danger: string;
-//     };
-//   }
-// }
 
 export const Font1 = "DM Sans, sans-serif";
 export const Font2 = "Fira Sans Condensed, sans-serif";
@@ -27,6 +19,7 @@ function App() {
       black: "#1c1c1c",
       white: "#ffffff",
       yellow: "#F0D608",
+      yellowHover: "#ffffff",
       grey: "#EDEDED",
       grey07: "rgba(255, 255, 255, 0.7)",
       grey08: "rgba(255, 255, 255, 0.8)",

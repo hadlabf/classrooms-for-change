@@ -7,6 +7,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import styled from "styled-components";
 import { Container } from "@mui/system";
 import { GetToKnow } from "./GetToKnow";
+import { BlobButton } from "../../components/UI/BlobButton";
 
 export const Home = (): JSX.Element => {
   return (
@@ -32,14 +33,18 @@ const TopHeader = (): JSX.Element => {
         ></Title1>
         <Text1 mb={6}>{t("pages.home.intro")}</Text1>
         <Box>
-          <Button>{t("pages.home.donateButton")}</Button>
+          <BlobButton navigateTo="/donate" text={t("pages.home.donateButton")} />
         </Box>
       </Col>
       <Col>
         <Card secondary>
           <Title4 weight="bold">{t("pages.home.latestUpdateCard.title")}</Title4>
           <Text1 mb={6}>{t("pages.home.latestUpdateCard.text")}</Text1>
-          <Button secondary>{t("pages.home.latestUpdateCard.button")}</Button>
+          <BlobButton
+            navigateTo="/latest-updates"
+            secondary
+            text={t("pages.home.latestUpdateCard.button")}
+          />
         </Card>
       </Col>
     </Box>
@@ -49,7 +54,7 @@ const WhoAreWe = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <Box>
+    <Box mb={6}>
       <Title2 weight="boldSlim">{t("pages.home.whoAreWe.title")}</Title2>
       <Text1>{t("pages.home.whoAreWe.p1")}</Text1>
       <Text1>{t("pages.home.whoAreWe.p2")}</Text1>

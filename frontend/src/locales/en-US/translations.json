@@ -74,6 +74,7 @@
     },
     "navbar": {
         "home": "Home",
+        "donate": "Donate",
         "latestUpdates": "Latest updates",
         "contact": "Contact"
     },
