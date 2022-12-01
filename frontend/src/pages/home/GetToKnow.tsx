@@ -8,6 +8,7 @@ import IconVillage from "@mui/icons-material/HolidayVillage";
 import IconBehind from "@mui/icons-material/Handshake";
 import styled from "styled-components";
 import { BlobButton } from "../../components/UI/BlobButton";
+import { Link } from "react-router-dom";
 
 export const GetToKnow = (): JSX.Element => {
   const { t } = useTranslation();
@@ -68,13 +69,9 @@ export const CardLayout = ({ icon, title, text, navigateTo }: CardLayoutProps): 
             {text}
           </Text2>
           <Box display="flex" justifyContent="center">
-            <BlobButton
-              text={t("common.readMore")}
-              fontSize={2}
-              px={8}
-              navigateTo={navigateTo}
-              secondary
-            ></BlobButton>
+            <Link to={navigateTo}>
+              <BlobButton text={t("common.readMore")} fontSize={2} px={8} secondary></BlobButton>
+            </Link>
           </Box>
         </Box>
       </Card>

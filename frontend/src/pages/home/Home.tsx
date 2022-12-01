@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { Container } from "@mui/system";
 import { GetToKnow } from "./GetToKnow";
 import { BlobButton } from "../../components/UI/BlobButton";
+import { Link } from "react-router-dom";
 
 export const Home = (): JSX.Element => {
   return (
@@ -33,18 +34,18 @@ const TopHeader = (): JSX.Element => {
         ></Title1>
         <Text1 mb={6}>{t("pages.home.intro")}</Text1>
         <Box>
-          <BlobButton navigateTo="/donate" text={t("pages.home.donateButton")} />
+          <Link to="/donate">
+            <BlobButton text={t("pages.home.donateButton")} />
+          </Link>
         </Box>
       </Col>
       <Col>
         <Card secondary>
           <Title4 weight="bold">{t("pages.home.latestUpdateCard.title")}</Title4>
           <Text1 mb={6}>{t("pages.home.latestUpdateCard.text")}</Text1>
-          <BlobButton
-            navigateTo="/latest-updates"
-            secondary
-            text={t("pages.home.latestUpdateCard.button")}
-          />
+          <Link to="/latest-updates">
+            <BlobButton secondary text={t("pages.home.latestUpdateCard.button")} />
+          </Link>
         </Card>
       </Col>
     </Box>
