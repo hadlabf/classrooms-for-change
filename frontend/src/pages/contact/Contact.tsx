@@ -17,7 +17,6 @@ export const Contact = (): JSX.Element => {
   const serviceId = "service_v30ifkg";
   const templateId = "template_808ukpj";
   const handleOnSubmit = (e: any) => {
-    console.log("RUNNIIIIIING!!!");
     e.preventDefault();
     emailjs.sendForm(serviceId, templateId, e.target, userId).then(
       (result) => {
