@@ -46,7 +46,7 @@ function App() {
     <ThemeConfig>
       <ThemeProvider theme={theme}>
         <Router>
-          <Container maxWidth="lg" sx={{ minHeight: "100vh" }}>
+          <Container maxWidth="xl" sx={{ minHeight: "100vh" }}>
             <Navbar />
             <Box mt={8}>
               <Routes>

@@ -26,9 +26,10 @@ export const Row = styled.div<{ gap?: number }>`
 `;
 
 // ******* CARD *******
-export const Card = styled.div<{ secondary?: boolean; width?: string }>`
+export const Card = styled.div<{ secondary?: boolean; width?: string; padding?: number }>`
   ${(props) => props.width && "width: " + props.width + ";"}
-  padding: ${(props) => props.theme.spacer * 3}px;
+  padding: ${(props) =>
+    props.padding !== undefined ? props.theme.spacer * props.padding : props.theme.spacer * 3}px;
   border-radius: ${(props) => props.theme.borderRadius.medium};
   background-color: ${(props) =>
     props.secondary ? props.theme.colors.grey07 : props.theme.colors.white} !important;
@@ -38,6 +39,23 @@ export const Card = styled.div<{ secondary?: boolean; width?: string }>`
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+export const LinkButton = styled.button`
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding-inline: 2px;
+  opacity: 1;
+  font-weight: 700;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
 `;
 
 export const Button = styled(ButtonUI)<{

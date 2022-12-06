@@ -8,7 +8,7 @@ export const Footer = (): JSX.Element => {
 
   return (
     <FooterContariner>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Box sx={{ flexGrow: 1 }}>
           <Container>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 10 }}>
