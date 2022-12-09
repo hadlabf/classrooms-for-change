@@ -132,8 +132,10 @@ export const Layout = ({ children, direction, background }: LayoutProp): JSX.Ele
       <GreyBottom />
       <Black />
       <BlackBottom />
-      {/* <Yellow /> */}
-      <Container maxWidth="xl" sx={{ minHeight: "100vh", position: "relative", zIndex: 10 }}>
+      <Container
+        maxWidth="xl"
+        sx={{ minHeight: "100vh", position: "relative", zIndex: 10, paddingTop: 8 }}
+      >
         <Box
           display="flex"
           flexDirection={direction ? direction : "row"}
@@ -149,6 +151,7 @@ export const Layout = ({ children, direction, background }: LayoutProp): JSX.Ele
 
 const Background = styled.div`
   position: relative;
+  overflow-y: clip;
 `;
 export const BottomTriangle = styled.div`
   z-index: 5;
@@ -170,7 +173,7 @@ export const Grey = styled.div`
   position: absolute;
   width: 100vw;
   background: ${(props) => props.theme.colors.grey};
-  height: 900px;
+  height: 100vh;
   top: 100px;
 `;
 export const GreyBottom = styled(BottomTriangle)`

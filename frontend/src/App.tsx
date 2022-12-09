@@ -45,7 +45,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Router>
           <Navbar />
-          <Box mt={8}>
+          <Box sx={{ overflowX: "clip" }}>
             <Routes>
               {useRoutes().map((route) => (
                 <Route key={route.path} path={route.path} element={route.node} />

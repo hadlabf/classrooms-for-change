@@ -59,7 +59,7 @@ const WhoAreWe = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <Box mb={6}>
+    <Box>
       <Title2 weight="boldSlim">{t("pages.home.whoAreWe.title")}</Title2>
       <Text1>{t("pages.home.whoAreWe.p1")}</Text1>
       <Text1>{t("pages.home.whoAreWe.p2")}</Text1>
