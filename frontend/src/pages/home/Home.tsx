@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Text1, Title1, Title2, Title3, Title4 } from "../../components/UI/Text";
 import { Col, Card } from "../../components/UI/Common";
@@ -25,29 +25,31 @@ const TopHeader = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <Box display="flex" flexDirection="row" justifyContent="flex-start">
-      <Col>
-        <Title1
-          dangerouslySetInnerHTML={{
-            __html: t("pages.home.slogan", { interpolation: { escapeValue: false } }),
-          }}
-        ></Title1>
-        <Text1 mb={6}>{t("pages.home.intro")}</Text1>
-        <Box>
-          <Link to="/donate">
-            <BlobButton text={t("pages.home.donateButton")} />
-          </Link>
-        </Box>
-      </Col>
-      <Col>
-        <Card secondary>
-          <Title4 weight="bold">{t("pages.home.latestUpdateCard.title")}</Title4>
-          <Text1 mb={6}>{t("pages.home.latestUpdateCard.text")}</Text1>
-          <Link to="/latest-updates">
-            <BlobButton secondary text={t("pages.home.latestUpdateCard.button")} />
-          </Link>
-        </Card>
-      </Col>
+    <Box display="flex" flexDirection="row" justifyContent="flex-start" sx={{ flexGrow: 1 }}>
+      <Grid container spacing={6}>
+        <Grid xs={12} md={6.5}>
+          <Title1
+            dangerouslySetInnerHTML={{
+              __html: t("pages.home.slogan", { interpolation: { escapeValue: false } }),
+            }}
+          ></Title1>
+          <Text1 mb={6}>{t("pages.home.intro")}</Text1>
+          <Box>
+            <Link to="/donate">
+              <BlobButton text={t("pages.home.donateButton")} />
+            </Link>
+          </Box>
+        </Grid>
+        <Grid xs={12} md={5.5}>
+          <Card secondary>
+            <Title4 weight="bold">{t("pages.home.latestUpdateCard.title")}</Title4>
+            <Text1 mb={6}>{t("pages.home.latestUpdateCard.text")}</Text1>
+            <Link to="/latest-updates">
+              <BlobButton secondary text={t("pages.home.latestUpdateCard.button")} />
+            </Link>
+          </Card>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
@@ -62,7 +64,7 @@ const WhoAreWe = (): JSX.Element => {
       <Text1 mb={4} weight="bold">
         {t("pages.home.whoAreWe.p3")}
       </Text1>
-      <Container sx={{ paddingInline: "0 !important" }}>
+      <Container maxWidth="xl" sx={{ paddingInline: "0 !important" }}>
         <Card secondary>
           <Box py={4} px={6} sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
@@ -129,7 +131,7 @@ const BuildingRequirements = (): JSX.Element => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 12 }}>
           {[...Array(length)].map((item, index) => (
-            <Grid xs={12} md={5} key={index}>
+            <Grid xs={12} md={6} lg={5} key={index}>
               <Box display="flex" flexDirection="row" alignItems="flex-start" gap={1}>
                 <AddCircleOutlineIcon fontSize="small" sx={{ marginTop: "3px" }} />
                 {/* <AddCircleOutlineIcon fontSize="small" sx={{ color: "#F0D608" }} /> */}

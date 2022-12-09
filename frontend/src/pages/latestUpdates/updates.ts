@@ -24,7 +24,7 @@ export const updates: Update[] = [
     date: "2022-11-22",
     imageUrl: img3,
     title: "One step closer!",
-    text: "We’ve finally removed the weeds✅ Now we are currently in the process of removing the roots and flattening the ground so we can achieve a solid ground to build upon.",
+    text: "We’ve finally removed the weeds! Now we are currently in the process of removing the roots and flattening the ground so we can achieve a solid ground to build upon.",
   },
   {
     id: 3,

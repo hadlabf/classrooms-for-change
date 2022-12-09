@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Card, Layout, LinkButton } from "../../components/UI/Common";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Update, updates } from "./updates";
-import { Text1, Text2, Text4, Title1, Title4 } from "../../components/UI/Text";
+import { Text1, Text2, Text3, Text4, Title1, Title4 } from "../../components/UI/Text";
 import { TimeSince } from "./Time";
 import styled from "styled-components";
 import { BlobButton } from "../../components/UI/BlobButton";
@@ -14,7 +14,7 @@ export const LatestUpdates = (): JSX.Element => {
   const updateSorted = updates.sort(function (a, b) {
     return b.id - a.id;
   });
-  const [page, setPage] = useState<number>(1);
+  const [page, setPage] = useState<number>(updateSorted[0].id);
   return (
     <Layout>
       <Box sx={{ flexGrow: 1 }}>
@@ -47,7 +47,7 @@ type UpdateProp = {
 export const MainUpdate = ({ update, page, setPage }: UpdateProp): JSX.Element => {
   const { t } = useTranslation();
   return (
-    <MagnifiedCard padding={2}>
+    <MagnifiedCard secondary padding={2}>
       <Box>
         {update.imageUrl && (
           <ImageContainer>
@@ -77,7 +77,7 @@ export const PreviusUpdates = ({ update, page, setPage }: UpdateProp): JSX.Eleme
   const { t } = useTranslation();
 
   return (
-    <MiniatureCard padding={0}>
+    <MiniatureCard secondary padding={0} style={{ opacity: page === update.id ? 0.7 : 1 }}>
       <Box flexGrow="1" padding={2}>
         <Text4 mb={0}>{TimeSince(update.date)}</Text4>
         <Text1 mb={0} weight="bold">
@@ -96,14 +96,26 @@ export const PreviusUpdates = ({ update, page, setPage }: UpdateProp): JSX.Eleme
             )}
           </Text4>
         </Ellipsis>
-        <BlobButton
-          onClick={() => setPage(update.id)}
-          disabled={page === update.id}
-          fontSize={1.5}
-          py={0.5}
-          px={1.5}
-          text={t("common.readMore")}
-        />
+        {page === update.id ? (
+          <Text4
+            sx={{
+              paddingBlock: "5.5px",
+            }}
+            mb={0}
+            weight="bold"
+          >
+            {t("common.currentlyReading")}
+          </Text4>
+        ) : (
+          <BlobButton
+            onClick={() => setPage(update.id)}
+            disabled={page === update.id}
+            fontSize={1.5}
+            py={0.5}
+            px={1.5}
+            text={t("common.readMore")}
+          />
+        )}
       </Box>
     </MiniatureCard>
   );

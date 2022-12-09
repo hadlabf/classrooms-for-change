@@ -31,7 +31,7 @@ function App() {
       familySecondary: "Permanent Marker, cursive",
       weight: {
         normal: 400,
-        boldSlim: 500,
+        boldSlim: 600,
         bold: 700,
       },
     },

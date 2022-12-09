@@ -4,7 +4,9 @@
         "done": "Done",
         "next": "Next",
         "previous": "Previous",
-        "readMore": "Read more"
+        "readMore": "Read more",
+        "comingSoon": "Coming soon",
+        "currentlyReading": "Currently reading"
     },
     "pages": {
         "home": {
@@ -18,7 +20,7 @@
             },
             "whoAreWe": {
                "title": "Who are we?",
-               "p1": "Classrooms for Change Ghana is a charity and volontair organization. It’s founded by me, Hadla. Let me introduce myself and tell you why I started this orgnaization! ",
+               "p1": "Classrooms for Change Ghana is a charity and volunteer organization. It’s founded by me, Hadla. Let me introduce myself and tell you why I started this orgnaization! ",
                "p2": "My name is Hadla Bergman. I’m a Software Engineer from Sweden. I’ve traveled between Sweden and Ghana for 5 years to help organize schools in villages. Ghana’s government sponser schools all over the contry to offer free education. Schools in villages unfortunatly lack this funding. Their not given a fair chance. That is why you and me are going to bring the education closer to them. ",
                "p3": "Let’s make the world a little more fair, together!",
 
@@ -59,7 +61,7 @@
                 },
                 "card3": {
                     "title": "The village",
-                    "text": "Krofu is a small village in central Ghana. ",
+                    "text": "Get to know the village! Krofu is a small village in central Ghana. ",
                     "hoverText": "Read more to get a closer look at the village."
                 }
             }
@@ -74,6 +76,26 @@
             "email": "Email",
             "message": "Message",
             "send": "Send message"
+        },
+        "donate": {
+            "copied": "Copied!",
+            "copy": "Copy",
+            "contactForm": "Go to contact form",
+            "title": "You really want to see change?",
+            "subtitle": "Do something incredible <span class='bold'>now</span>,</br > the power is in <span class='bold'>your hands</span>.",
+            "text": "Our donation sollution is in progress at the moment. To donate please contact us through the contact form or send a text to",
+            "quote1": {
+                "quote": "No one is useless in this world who lightens the burdens of another.",
+                "author": "Charles Dickens"
+            },
+            "quote2": {
+                "quote": "Happiness doesn’t result from what we get, but from what we give.",
+                "author": "Ben Carson"
+            },
+            "quote3": {
+                "quote": "The meaning of life is to find your gift. The purpose of life is to give it away.",
+                "author": "Pablo Picasso"
+            }
         }
     },
     "navbar": {

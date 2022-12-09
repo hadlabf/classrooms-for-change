@@ -26,15 +26,24 @@ export const Row = styled.div<{ gap?: number }>`
 `;
 
 // ******* CARD *******
-export const Card = styled.div<{ secondary?: boolean; width?: string; padding?: number }>`
+export const Card = styled.div<{
+  reverse?: boolean;
+  secondary?: boolean;
+  width?: string;
+  padding?: number;
+}>`
   ${(props) => props.width && "width: " + props.width + ";"}
   padding: ${(props) =>
     props.padding !== undefined ? props.theme.spacer * props.padding : props.theme.spacer * 3}px;
   border-radius: ${(props) => props.theme.borderRadius.medium};
   background-color: ${(props) =>
-    props.secondary ? props.theme.colors.grey07 : props.theme.colors.white} !important;
+    props.secondary
+      ? props.theme.colors.grey07
+      : props.reverse
+      ? props.theme.colors.black
+      : props.theme.colors.white} !important;
   * {
-    color: ${(props) => props.theme.colors.black};
+    color: ${(props) => (props.reverse ? props.theme.colors.white : props.theme.colors.black)};
   }
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
@@ -60,6 +69,7 @@ export const LinkButton = styled.button`
 
 export const Button = styled(ButtonUI)<{
   secondary?: boolean;
+  reverse?: boolean;
   py?: number;
   px?: number;
   fontSize?: number;
@@ -76,7 +86,9 @@ export const Button = styled(ButtonUI)<{
   background-color: ${(props) =>
     props.secondary ? props.theme.colors.yellow : props.theme.colors.black} !important;
   color: ${(props) =>
-    props.secondary ? props.theme.colors.black : props.theme.colors.white} !important;
+    props.secondary || props.reverse
+      ? props.theme.colors.black
+      : props.theme.colors.white} !important;
 `;
 
 export const BuildingRequirements = ({ children }: ChildProp): JSX.Element => {
@@ -90,9 +102,19 @@ export const BuildingRequirements = ({ children }: ChildProp): JSX.Element => {
     </Box>
   );
 };
-export const Layout = ({ children }: ChildProp): JSX.Element => {
+type LayoutProp = {
+  children: JSX.Element | ReactNode;
+  direction?: "row" | "column";
+};
+
+export const Layout = ({ children, direction }: LayoutProp): JSX.Element => {
   return (
-    <Box display="flex" flexDirection="row" justifyContent="flex-start" alignItems="flex-start">
+    <Box
+      display="flex"
+      flexDirection={direction ? direction : "row"}
+      justifyContent="flex-start"
+      alignItems="flex-start"
+    >
       {children}
     </Box>
   );

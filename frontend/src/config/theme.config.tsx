@@ -1,6 +1,19 @@
 import React from "react";
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 
+export const Size = {
+  xs: 0,
+  sm: 600,
+  md: 800,
+  lg: 900,
+  xl: 1024,
+};
+export const Device = {
+  xs: `(min-width: ${Size.xs})`,
+  sm: `(min-width: ${Size.sm})`,
+  lg: `(min-width: ${Size.lg})`,
+};
+
 type ThemeProp = {
   children: JSX.Element;
 };
@@ -27,11 +40,11 @@ const theme = createTheme({
   },
   breakpoints: {
     values: {
-      xs: 0,
-      sm: 600,
-      md: 800,
-      lg: 900,
-      xl: 1024,
+      xs: Size.xs,
+      sm: Size.sm,
+      md: Size.md,
+      lg: Size.lg,
+      xl: Size.xl,
     },
   },
   typography: {

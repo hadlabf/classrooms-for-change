@@ -5,6 +5,7 @@ type BlobButtonProps = {
   text: string;
   fontSize?: number;
   secondary?: boolean | undefined;
+  reverse?: boolean | undefined;
   py?: number;
   px?: number;
   disabled?: boolean;
@@ -16,6 +17,7 @@ export const BlobButton = ({
   py,
   px,
   secondary,
+  reverse,
   disabled,
   onClick,
 }: BlobButtonProps): JSX.Element => {
@@ -29,6 +31,7 @@ export const BlobButton = ({
           py={py ? py : 1}
           px={px ? px : 3}
           secondary={secondary ? true : false}
+          reverse={reverse ? true : false}
           className="blob-btn"
         >
           {text}
@@ -40,6 +43,7 @@ export const BlobButton = ({
           py={py ? py : 1}
           px={px ? px : 3}
           secondary={secondary ? true : false}
+          reverse={reverse ? true : false}
           className="blob-btn"
           type="submit"
         >
@@ -84,6 +88,7 @@ const BlobSvg = (): JSX.Element => {
 
 const Button = styled(ButtonUI)<{
   secondary?: boolean;
+  reverse?: boolean;
 }>`
   & .blob-btn__blob {
     background-color: ${(props) =>
@@ -91,7 +96,11 @@ const Button = styled(ButtonUI)<{
   }
   & .blob-btn__inner {
     background: ${(props) =>
-      props.secondary ? props.theme.colors.yellow : props.theme.colors.black} !important;
+      props.secondary
+        ? props.theme.colors.yellow
+        : props.reverse
+        ? props.theme.colors.white
+        : props.theme.colors.black} !important;
     border-radius: ${(props) => props.theme.borderRadius.small};
   }
   &:hover {

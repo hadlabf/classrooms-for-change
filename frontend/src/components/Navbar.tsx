@@ -78,6 +78,7 @@ const LanguageSwitcher = (): JSX.Element => {
           value={lng}
           disabled={i18n.resolvedLanguage === lng}
           onClick={() => i18n.changeLanguage(lng)}
+          sx={{ padding: 1, paddingTop: 0, paddingRight: 1, paddingBottom: 0 }}
         >
           {lng}
         </ToggleButton>
