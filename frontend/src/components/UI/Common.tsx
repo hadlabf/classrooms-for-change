@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Box, Button as ButtonUI } from "@mui/material";
+import { Box, Button as ButtonUI, Container } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { ReactNode } from "react";
+import { Size } from "../../config/theme.config";
 
 type ChildProp = {
   children: JSX.Element | ReactNode;
@@ -18,6 +19,22 @@ export const Col = styled.div<{
       props.py !== undefined ? props.py * props.theme.spacer : props.theme.spacer * 0}px
     ${(props) =>
       props.px !== undefined ? props.px * props.theme.spacer : props.theme.spacer * 0}px !important;
+  @media only screen and (max-width: ${Size.md}px) {
+    padding: ${(props) =>
+        props.py !== undefined ? (props.py / 2) * props.theme.spacer : props.theme.spacer * 0}px
+      ${(props) =>
+        props.px !== undefined
+          ? (props.px / 2) * props.theme.spacer
+          : props.theme.spacer * 0}px !important;
+  }
+  @media only screen and (max-width: ${Size.sm}px) {
+    padding: ${(props) =>
+        props.py !== undefined ? (props.py / 4) * props.theme.spacer : props.theme.spacer * 0}px
+      ${(props) =>
+        props.px !== undefined
+          ? (props.px / 4) * props.theme.spacer
+          : props.theme.spacer * 0}px !important;
+  }
 `;
 export const Row = styled.div<{ gap?: number }>`
   display: flex;
@@ -105,17 +122,96 @@ export const BuildingRequirements = ({ children }: ChildProp): JSX.Element => {
 type LayoutProp = {
   children: JSX.Element | ReactNode;
   direction?: "row" | "column";
+  background?: string;
 };
-
-export const Layout = ({ children, direction }: LayoutProp): JSX.Element => {
+export const Layout = ({ children, direction, background }: LayoutProp): JSX.Element => {
   return (
-    <Box
-      display="flex"
-      flexDirection={direction ? direction : "row"}
-      justifyContent="flex-start"
-      alignItems="flex-start"
-    >
-      {children}
-    </Box>
+    <Background>
+      <YellowBottom />
+      <Grey />
+      <GreyBottom />
+      <Black />
+      <BlackBottom />
+      {/* <Yellow /> */}
+      <Container maxWidth="xl" sx={{ minHeight: "100vh", position: "relative", zIndex: 10 }}>
+        <Box
+          display="flex"
+          flexDirection={direction ? direction : "row"}
+          justifyContent="flex-start"
+          alignItems="flex-start"
+        >
+          {children}
+        </Box>
+      </Container>
+    </Background>
   );
 };
+
+const Background = styled.div`
+  position: relative;
+`;
+export const BottomTriangle = styled.div`
+  z-index: 5;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+`;
+export const YellowBottom = styled(BottomTriangle)`
+  top: 100px;
+  border-top: 20vw solid ${(props) => props.theme.colors.yellow};
+  border-left: none;
+  border-right: 100vw solid transparent;
+`;
+
+export const Grey = styled.div`
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  background: ${(props) => props.theme.colors.grey};
+  height: 900px;
+  top: 100px;
+`;
+export const GreyBottom = styled(BottomTriangle)`
+  top: 900px;
+  left: -55vw;
+  border-top: 300px solid ${(props) => props.theme.colors.grey};
+  border-right: 90vw solid transparent;
+  border-left: 90vw solid transparent;
+`;
+
+export const Black = styled.div`
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+  background: ${(props) => props.theme.colors.black};
+  height: 600px;
+  top: 900px;
+`;
+export const BlackBottom = styled(BottomTriangle)`
+  top: 1500px;
+  left: -55vw;
+  border-top: 300px solid ${(props) => props.theme.colors.black};
+  border-right: 90vw solid transparent;
+  border-left: 90vw solid transparent;
+`;
+export const Yellow = styled.div`
+  z-index: 3;
+  width: 100vw;
+  background: ${(props) => props.theme.colors.yellow};
+  position: absolute;
+  height: 100vh;
+  top: 1100px;
+`;
+
+export const Fixed = styled.div`
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 3;
+  border-right: 200px solid transparent;
+  border-top: 500px solid red;
+`;

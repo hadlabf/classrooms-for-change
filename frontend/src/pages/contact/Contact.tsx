@@ -10,6 +10,8 @@ import IconInstagram from "@mui/icons-material/Instagram";
 import IconEmail from "@mui/icons-material/Markunread";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import styled from "styled-components";
+import { Size } from "../../config/theme.config";
 
 export const Contact = (): JSX.Element => {
   const { t } = useTranslation();
@@ -40,10 +42,15 @@ export const Contact = (): JSX.Element => {
   return (
     <Layout>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid xs={12} sm={6}>
-            <Title1 weight="bold">{t("pages.contact.title")}</Title1>
+        <Title1 sx={{ display: { xs: "block", md: "none" } }} weight="bold">
+          {t("pages.contact.title")}
+        </Title1>
+        <GridParent container spacing={2}>
+          <Grid xs={12} md={6}>
             <Stack gap={1}>
+              <Title1 sx={{ display: { xs: "none", md: "block" } }} weight="bold">
+                {t("pages.contact.title")}
+              </Title1>
               <Link href="https://www.instagram.com/classroomsforchange/" target="_blank">
                 <Box display="flex" flexDirection="row" alignItems="center">
                   <IconInstagram />
@@ -64,7 +71,7 @@ export const Contact = (): JSX.Element => {
               </Link>
             </Stack>
           </Grid>
-          <Grid xs={12} sm={6}>
+          <Grid xs={12} md={6} mb={2}>
             <Card>
               <Col py={3} px={3}>
                 <form id="contact-form" action="POST" onSubmit={handleOnSubmit}>
@@ -96,8 +103,14 @@ export const Contact = (): JSX.Element => {
               </Col>
             </Card>
           </Grid>
-        </Grid>
+        </GridParent>
       </Box>
     </Layout>
   );
 };
+
+const GridParent = styled(Grid)`
+  @media only screen and (max-width: ${Size.md}px) {
+    flex-direction: column-reverse !important;
+  }
+`;

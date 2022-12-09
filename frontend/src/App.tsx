@@ -1,10 +1,8 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./App.scss";
 import { Navbar } from "./components/Navbar";
 import { useRoutes } from "./routes";
-import { Container } from "@mui/material";
 import { ThemeProvider } from "styled-components";
 import { ThemeConfig } from "./config/theme.config";
 import { Footer } from "./components/Footer";
@@ -31,7 +29,7 @@ function App() {
       familySecondary: "Permanent Marker, cursive",
       weight: {
         normal: 400,
-        boldSlim: 600,
+        boldSlim: 500,
         bold: 700,
       },
     },
@@ -46,16 +44,14 @@ function App() {
     <ThemeConfig>
       <ThemeProvider theme={theme}>
         <Router>
-          <Container maxWidth="xl" sx={{ minHeight: "100vh" }}>
-            <Navbar />
-            <Box mt={8}>
-              <Routes>
-                {useRoutes().map((route) => (
-                  <Route key={route.path} path={route.path} element={route.node} />
-                ))}
-              </Routes>
-            </Box>
-          </Container>
+          <Navbar />
+          <Box mt={8}>
+            <Routes>
+              {useRoutes().map((route) => (
+                <Route key={route.path} path={route.path} element={route.node} />
+              ))}
+            </Routes>
+          </Box>
           <Footer />
         </Router>
       </ThemeProvider>

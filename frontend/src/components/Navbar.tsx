@@ -10,12 +10,14 @@ import {
   MenuItem,
   ToggleButton,
   ToggleButtonGroup,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 import { useNavbarRoutes } from "../routes";
 import { PrimaryLink } from "./Link";
+import { Text1 } from "./UI/Text";
 
 export const Navbar = (): JSX.Element => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -29,33 +31,35 @@ export const Navbar = (): JSX.Element => {
   };
 
   return (
-    <AppBar
-      sx={{ backgroundColor: "transparent", boxShadow: "none !important" }}
-      className="navbar-appbar"
-      position="static"
-    >
-      <Toolbar disableGutters>
-        <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-          <Logo color="black" />
-        </Box>
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-          <MobileNav
-            handleCloseNavMenu={handleCloseNavMenu}
-            handleOpenNavMenu={handleOpenNavMenu}
-            anchorElNav={anchorElNav}
-          />
-        </Box>
-        <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-          <Logo color="black" />
-        </Box>
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <NavRoutes handleCloseNavMenu={handleCloseNavMenu} />
-        </Box>
-        <Box sx={{ flexGrow: 0 }}>
-          <LanguageSwitcher />
-        </Box>
-      </Toolbar>
-    </AppBar>
+    <Container maxWidth="xl">
+      <AppBar
+        sx={{ backgroundColor: "transparent", boxShadow: "none !important" }}
+        className="navbar-appbar"
+        position="static"
+      >
+        <Toolbar disableGutters>
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+            <Logo color="black" />
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <MobileNav
+              handleCloseNavMenu={handleCloseNavMenu}
+              handleOpenNavMenu={handleOpenNavMenu}
+              anchorElNav={anchorElNav}
+            />
+          </Box>
+          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+            <Logo color="black" />
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <NavRoutes handleCloseNavMenu={handleCloseNavMenu} />
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <LanguageSwitcher />
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Container>
   );
 };
 
@@ -104,7 +108,7 @@ const MobileNav = ({
         aria-controls="menu-appbar"
         aria-haspopup="true"
         onClick={handleOpenNavMenu}
-        color="inherit"
+        color="primary"
       >
         <MenuIcon />
       </IconButton>
@@ -129,7 +133,9 @@ const MobileNav = ({
         {useNavbarRoutes().map((route) => (
           <PrimaryLink to={route.to} key={route.to}>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">{route.text}</Typography>
+              <Text1 mb={0} color="primary" textAlign="center">
+                {route.text}
+              </Text1>
             </MenuItem>
           </PrimaryLink>
         ))}

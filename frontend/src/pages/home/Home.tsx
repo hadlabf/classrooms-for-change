@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Text1, Title1, Title2, Title3, Title4 } from "../../components/UI/Text";
-import { Col, Card } from "../../components/UI/Common";
+import { Card, Layout } from "../../components/UI/Common";
 import Grid from "@mui/material/Unstable_Grid2";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import styled from "styled-components";
@@ -12,12 +12,14 @@ import { Link } from "react-router-dom";
 
 export const Home = (): JSX.Element => {
   return (
-    <Stack gap={10}>
-      <TopHeader />
-      <WhoAreWe />
-      <BuildingRequirements />
-      <GetToKnow />
-    </Stack>
+    <Layout>
+      <Stack gap={10}>
+        <TopHeader />
+        <WhoAreWe />
+        <BuildingRequirements />
+        <GetToKnow />
+      </Stack>
+    </Layout>
   );
 };
 
@@ -66,7 +68,14 @@ const WhoAreWe = (): JSX.Element => {
       </Text1>
       <Container maxWidth="xl" sx={{ paddingInline: "0 !important" }}>
         <Card secondary>
-          <Box py={4} px={6} sx={{ flexGrow: 1 }}>
+          <Box
+            px={6}
+            sx={{
+              paddingBlock: { xs: 0.5, sm: 1, md: 2, lg: 4 },
+              paddingInline: { xs: 0.75, sm: 1.25, md: 2.5, lg: 6 },
+              flexGrow: 1,
+            }}
+          >
             <Grid container spacing={2}>
               <Grid xs={12}>
                 <Title3 weight="bold">{t("pages.home.whoAreWe.longTerm.title")}</Title3>
@@ -133,8 +142,10 @@ const BuildingRequirements = (): JSX.Element => {
           {[...Array(length)].map((item, index) => (
             <Grid xs={12} md={6} lg={5} key={index}>
               <Box display="flex" flexDirection="row" alignItems="flex-start" gap={1}>
-                <AddCircleOutlineIcon fontSize="small" sx={{ marginTop: "3px" }} />
-                {/* <AddCircleOutlineIcon fontSize="small" sx={{ color: "#F0D608" }} /> */}
+                <AddCircleOutlineIcon
+                  fontSize="small"
+                  sx={{ marginTop: "3px", color: "#F0D608" }}
+                />
                 <Text1 mb={0} color="secondary">
                   {t(`pages.home.building.li${index + 1}`)}
                 </Text1>
