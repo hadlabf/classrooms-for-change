@@ -45,21 +45,21 @@ type UpdateProp = {
   setPage: Dispatch<SetStateAction<number>>;
 };
 export const MainUpdate = ({ update, page, setPage }: UpdateProp): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const translate = i18n.resolvedLanguage === "sv" ? update.swedish : update.english;
+
   return (
     <MagnifiedCard secondary padding={2}>
       <Box>
-        {update.imageUrl && (
-          <ImageContainer>
-            <img alt="cover" src={update.imageUrl} />
-          </ImageContainer>
-        )}
+        <ImageContainer>
+          {update.imageUrl && <img alt="cover" src={update.imageUrl} />}
+        </ImageContainer>
         <Text4 mb={0}>{TimeSince(update.date)}</Text4>
         <Title4 mb={2} lineHeight={1} weight="bold">
-          {update.title}
+          {translate.title}
         </Title4>
-        <Text2>{update.text}</Text2>
-        {update.text2 && <Text2>{update.text}</Text2>}
+        <Text2>{translate.text}</Text2>
+        {translate.text2 && <Text2>{translate.text2}</Text2>}
       </Box>
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <LinkButton disabled={page === updates.length} onClick={() => setPage(page + 1)}>
@@ -74,22 +74,23 @@ export const MainUpdate = ({ update, page, setPage }: UpdateProp): JSX.Element =
 };
 
 export const PreviusUpdates = ({ update, page, setPage }: UpdateProp): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const translate = i18n.resolvedLanguage === "sv" ? update.swedish : update.english;
 
   return (
     <MiniatureCard secondary padding={0} style={{ opacity: page === update.id ? 0.7 : 1 }}>
       <Box flexGrow="1" padding={2}>
         <Text4 mb={0}>{TimeSince(update.date)}</Text4>
         <Text1 mb={0} weight="bold">
-          {update.title}
+          {translate.title}
         </Text1>
         <Ellipsis numOfLines={2}>
           <Text4 mb={1}>
-            {update.text}
-            {update.text2 ? (
+            {translate.text}
+            {translate.text2 ? (
               <>
                 <br />
-                <br /> {update.text2}
+                <br /> {translate.text2}
               </>
             ) : (
               ""

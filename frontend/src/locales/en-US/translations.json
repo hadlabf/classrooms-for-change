@@ -8,6 +8,14 @@
         "comingSoon": "Coming soon",
         "currentlyReading": "Currently reading"
     },
+    "time": {
+        "yearsAgo": " years ago",
+        "monthsAgo": " months ago",
+        "daysAgo": " days ago",
+        "hoursAgo": " hours ago",
+        "minutesAgo": " minutes ago",
+        "secondsAgo": " seconds ago"
+    },
     "pages": {
         "home": {
             "slogan": "<span class='bolder'>Help</span>  us <span class='bolder'>help</span>  you <span class='bolder'>help</span> <span class='f3'>the children</span>",
@@ -24,11 +32,11 @@
                "p2": "My name is Hadla Bergman. I’m a Software Engineer from Sweden. I’ve traveled between Sweden and Ghana for 5 years to help organize schools in villages. Ghana’s government sponser schools all over the contry to offer free education. Schools in villages unfortunatly lack this funding. Their not given a fair chance. That is why you and me are going to bring the education closer to them. ",
                "p3": "Let’s make the world a little more fair, together!",
 
-               "longTerm.title": "What is out long-term vision?",
+               "longTerm.title": "What is our long-term vision?",
                "longTerm.text": "To give children a  <span class='bold'>chance for a better future</span>, by helping them <span class='bold'>develop skills</span> and <span class='bold'>competence</span> necessary to help them <span class='bold'>out of poverty</span>. Hence, the most important mission is to build a school that <span class='bold'>receives continuous support</span> in order to succeed in <span class='bold'>creating lasting improvement</span>.",
                
                "mission.title": "What is our mission?",
-               "mission.text": "We want to give children a more <span class='bold'>secure</span> and <span class='bold'>stable</span> future by helping them develop the skills and competence necessary to <span class='bold'>help them out of poverty.</span> </br> </br> Help us <span class='bold'>endance</span> the <span class='bold'>education rate</span> in villages secluded from these opportunities.",
+               "mission.text": "We want to give children a more <span class='bold'>secure</span> and <span class='bold'>stable</span> future by helping them develop the skills and competence necessary to <span class='bold'>help them out of poverty.</span> </br> </br> Help us <span class='bold'>enhance</span> the <span class='bold'>education rate</span> in villages secluded from these opportunities.",
                
                "succeed.title": "How will we succeed with our mission?",
                "succeed.text": "To be able to make a <span class='bold'>real change</span>, we need to provide <span class='bold'>continuous support </span>for <span class='bold'>years and years to come</span>. We have people both in <span class='bold'>Sweden</span> and in <span class='bold'>Ghana</span> to make sure the project is <span class='bold'>always moving forward</span>."
@@ -38,7 +46,7 @@
                 "li1": "800 blocks of stone.",
                 "li2": "Paint for walls and handmade furniture.",
                 "li3": "50 bags of cement.",
-                "li4": "Contractor for building the classroom.",
+                "li4": "Construction workers for building the classroom.",
                 "li5": "1 and 1/2 trucks of sand.",
                 "li6": "Contractor to build chairs and tables.",
                 "li7": "4-5 windows and 1 door.",
@@ -65,10 +73,6 @@
                     "hoverText": "Read more to get a closer look at the village."
                 }
             }
-
-        },
-        "about": {
-            "title": "About us"
         },
         "contact": {
             "title": "We’ve been waiting for you.",
@@ -104,6 +108,13 @@
         "latestUpdates": "Latest updates",
         "contact": "Contact"
     },
+    "footer": {
+        "p1": "Classroom for Change",
+        "p2": "Stockholm, Sweden, Europe",
+        "p3": "Krofu, Ghana, Africa",
+        "p4": "hadla.bergman@classroomsforchange.org",
+        "p5": "+46 76 115 58 42"
+    },
     "steps": {
         "step": "Step",
         "step1": {
@@ -127,12 +138,5 @@
             "description2": "DESCRIPTION2",
             "description3": "DESCRIPTION3"
         }
-    },
-    "footer": {
-        "p1": "Classroom for Change",
-        "p2": "Stockholm, Sweden, Europe",
-        "p3": "Krofu, Ghana, Africa",
-        "p4": "hadla.bergman@classroomsforchange.org",
-        "p5": "+46 76 115 58 42"
     }
 }

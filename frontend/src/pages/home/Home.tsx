@@ -9,6 +9,7 @@ import { Container } from "@mui/system";
 import { GetToKnow } from "./GetToKnow";
 import { BlobButton } from "../../components/UI/BlobButton";
 import { Link } from "react-router-dom";
+import { Size } from "../../config/theme.config";
 
 export const Home = (): JSX.Element => {
   return (
@@ -87,7 +88,7 @@ const WhoAreWe = (): JSX.Element => {
                   }}
                 />
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} sm={6}>
                 <Left>
                   <Title3 weight="bold">{t("pages.home.whoAreWe.mission.title")}</Title3>
                   <Text1
@@ -99,7 +100,7 @@ const WhoAreWe = (): JSX.Element => {
                   />
                 </Left>
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={12} sm={6}>
                 <Right>
                   <Title3 weight="bold">{t("pages.home.whoAreWe.succeed.title")}</Title3>
                   <Text1
@@ -121,12 +122,16 @@ const WhoAreWe = (): JSX.Element => {
 };
 
 const Left = styled.div`
-  padding-right: ${(props) => props.theme.spacer * 1.5}px;
+  @media only screen and (min-width: ${Size.sm}px) {
+    padding-right: ${(props) => props.theme.spacer * 1.5}px;
+  }
 `;
 const Right = styled.div`
-  padding-left: ${(props) => props.theme.spacer * 4}px;
-  border-left: 2px solid ${(props) => props.theme.colors.black};
   padding-bottom: ${(props) => props.theme.spacer * 1}px;
+  @media only screen and (min-width: ${Size.sm}px) {
+    padding-left: ${(props) => props.theme.spacer * 4}px;
+    border-left: 2px solid ${(props) => props.theme.colors.black};
+  }
 `;
 
 const BuildingRequirements = (): JSX.Element => {

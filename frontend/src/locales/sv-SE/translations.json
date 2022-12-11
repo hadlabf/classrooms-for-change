@@ -4,15 +4,23 @@
         "done": "Klar",
         "next": "Nästa",
         "previous": "Föregående",
-        "readMore": "Läs mer"
+        "readMore": "Läs mer",
+        "comingSoon": "Kommer snart",
+        "currentlyReading": "Läser nu"
+    },
+    "time": {
+        "yearsAgo": " år sedan",
+        "monthsAgo": " månader sedan",
+        "daysAgo": " dagar sedan",
+        "hoursAgo": " timmar sedan",
+        "minutesAgo": " minuter sedan",
+        "secondsAgo": " sekunder sedan"
     },
     "pages": {
         "home": {
             "slogan": "<span class='bolder'>Hjälp</span> oss <span class='bolder'>hjälpa</span> dig <span class='bolder'>hjälpa</span> <span class='f3'>barnen</span>",
             "intro": "Gå med i vårt uppdrag att föra utbildning närmare barn i byarna.",
             "donateButton": "Donera nu",
-            "text1": "",
-            "text2": "",
             "latestUpdateCard": {
                "title": "Nyfiken på vad vi gör just nu?",
                "text": "Följ våra senaste uppdateringar och nyheter i vår blogg",
@@ -23,16 +31,48 @@
                 "p1": "Classrooms for Change Ghana är en välgörenhets- och volontärorganisation, grundad av mig, Hadla. Låt mig presentera mig samt anledningen bakom varför jag startade Classrooms for Change!",
                 "p2": "Jag heter Hadla Bergman. Jag är en en Software Engineer från Stockholm. Jag har rest emellan Sverige och Ghana under 5 års tid för att organisera upp skolor i mindre byar. Ghana’s regeringsponsrar skolor över hela landet för att erbjuda gratis utbildning. Men skolor i byar saknar tyvärr denna finansiering. De har inte fått en rättvis chans. Det är därför du och jag ska föra utbildningen närmare dem som aldrig fick en ärlig chans. ",
                 "p3": "Låt oss göra världen lite mer rättvis tillsammans!",
-                "longTerm.title": "What is out long-term vision?",
-                "longTerm.text": "HERE",
-                "mission.title": "What is our mission?",
-                "mission.text": "We want to give children a more <span class='bold'>secure</span> and <span class='bold'>stable</span> future by helping them develop the skills and competence necessary to <span class='bold'>help them out of poverty.</span> </b></b> Help us <span class='bold'>endance</span> the <span class='bold'>education rate</span> in villages secluded from these opportunities.",
-                "succeed.title": "How will we succeed with our mission?",
-                "succeed.text": "HERE"
+               
+                "longTerm.title": "Vad är vår långsiktiga vision?",
+                "longTerm.text": "Att erbjuda en väg ut ur fattigdom med en bättre framtid genom att erbjuda en stabil utbildning. Därför är det viktigaste uppdraget att bygga en skola som får kontinuerligt stöd för att lyckas skapa bestående förbättringar.",
+
+                "mission.title": "Vad är vårt uppdrag?",
+                "mission.text": "Vi vill ge barn en trygg och stabil framtid genom att hjälpa dem utveckla de färdigheter och kompetenser som krävs för att ta sig ur fattigdom. Hjälp oss att öka utbildningsgraden i byar som som aldrig fick en ärlig chans.",
+
+                "succeed.title": "Hur ska vi lyckas med vårt uppdrag?",
+                "succeed.text": "För att kunna göra en betydande och bestående förändring behöver vi ge kontinuerligt stöd under många år framöver. Vi har människor både i Sverige och Ghana för att se till att projektet alltid rullar framåt."
+             },
+             "building": {
+                 "title": "Vad krävs för att bygga ett klassrum?",
+                 "li1": "800 stenblock.",
+                 "li2": "Målarfärg för väggar och handgjorddra möbler",
+                 "li3": "50 påsar cement",
+                 "li4": "Byggarbetare för byggning av klassrum.",
+                 "li5": "1 och 1/2 lastbil med sand.",
+                 "li6": "Arbetskraft till grävning av grund.",
+                 "li7": "4-5 fönster samt 1 dörr.",
+                 "li8": "Anlita 1 lärare per klassrum samt sponsra hens lärarlön.",
+                 "li9": "Takläggning med regnvattensystem.",
+                 "li10": "Hantverkare för byggning av möbler såsom bänkar, bord, stolar och hyllplan.",
+                 "li11": "Köpa material, altt från böcker och pennor till svarta tavlan."
+             },
+             "GTK": {
+                 "title": "Get to know...",
+                 "card1": {
+                     "title": "Folket i Krofu",
+                     "text": "Lär känna några av våra lokalbor i byn Krofu.",
+                     "hoverText": "När du anländer i Krofu, möts du av så mycket kärlek."
+                 },
+                 "card2": {
+                     "title": "Vem ligger bakom skolan?",
+                     "text": "Lär känna några av de människor som hjälper oss att förverkliga vårt uppdrag!",
+                     "hoverText": "Vi är en liten orginization med ett stort uppdrag."
+                 },
+                 "card3": {
+                     "title": "Byn",
+                     "text": "Lär känna byn där vi valt att placerfa vår skola! Krofu är en liten by i centrala Ghana.",
+                     "hoverText": "Läs mer för att vå en bättre bild av byn."
+                 }
              }
-        },
-        "about": {
-            "title": "Om oss"
         },
         "contact": {
             "title": "Kontakta oss",
@@ -40,13 +80,40 @@
             "email": "E-post",
             "message": "Meddelande",
             "send": "Skicka meddelande"
-        }
+        },
+        "donate": {
+            "copied": "Kopierat!",
+            "copy": "Kopiera",
+            "contactForm": "Gå till kontaktformulär",
+            "title": "Vil du verkligen se skillnad?",
+            "subtitle": "Gör något otroligt <span class='bold'>nu</span>, makten ligger i  <span class='bold'>dina händer</span>.",
+            "text": "Vår doneringslösning byggs just nu. För tillfället behöver du kontakta oss för att göra en donering. Skicka ett meddelande till oss via vårt kontaktformulär, eller skriv ett sms till:",
+            "quote1": {
+                "quote": "No one is useless in this world who lightens the burdens of another.",
+                "author": "Charles Dickens"
+            },
+            "quote2": {
+                "quote": "Happiness doesn’t result from what we get, but from what we give.",
+                "author": "Ben Carson"
+            },
+            "quote3": {
+                "quote": "The meaning of life is to find your gift. The purpose of life is to give it away.",
+                "author": "Pablo Picasso"
+            }
+        }   
     },
     "navbar": {
         "home": "Hem",
         "donate": "Donera",
         "latestUpdates": "Senaste uppdateringar",
         "contact": "Kontakt"
+    },
+    "footer": {
+        "p1": "Classroom for Change",
+        "p2": "Stockholm, Sweden, Europe",
+        "p3": "Krofu, Ghana, Africa",
+        "p4": "hadla.bergman@classroomsforchange.org",
+        "p5": "+46 76 115 58 42"
     },
     "steps": {
         "step": "Steg",
