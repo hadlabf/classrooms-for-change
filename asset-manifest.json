@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/classrooms-for-change/static/css/main.54461c1b.css",
+    "main.js": "/classrooms-for-change/static/js/main.e6f17a0d.js",
+    "static/js/787.cda612ba.chunk.js": "/classrooms-for-change/static/js/787.cda612ba.chunk.js",
+    "static/media/img2.jpg": "/classrooms-for-change/static/media/img2.ef5414946b874b14c7f6.jpg",
+    "static/media/img3.jpg": "/classrooms-for-change/static/media/img3.bde03056e3be2a526914.jpg",
+    "static/media/school-id4.png": "/classrooms-for-change/static/media/school-id4.ed21eb6bcd931c500ebf.png",
+    "static/media/logo-white.png": "/classrooms-for-change/static/media/logo-white.aae57082c8b6e1ed6af4.png",
+    "static/media/logo-black.png": "/classrooms-for-change/static/media/logo-black.7e8923ff4b7838b4394e.png",
+    "index.html": "/classrooms-for-change/index.html",
+    "static/media/getFetch.cjs": "/classrooms-for-change/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.54461c1b.css.map": "/classrooms-for-change/static/css/main.54461c1b.css.map",
+    "main.e6f17a0d.js.map": "/classrooms-for-change/static/js/main.e6f17a0d.js.map",
+    "787.cda612ba.chunk.js.map": "/classrooms-for-change/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54461c1b.css",
+    "static/js/main.e6f17a0d.js"
+  ]
+}
